@@ -5,8 +5,11 @@ const AddPackages = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
+
+        // giving alert after successfully adding a package
         alert('package added successfully in Packages')
 
+        // set the add package data to the database
         fetch('https://creepy-zombie-41639.herokuapp.com/addpackage', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
@@ -18,6 +21,8 @@ const AddPackages = () => {
     return (
         <div>
             <h1 style={{ color: 'green', fontSize: '35px', fontWeight: '600' }} className='mt-5 mb-3'>Please Provide these Information</h1>
+
+            {/* react hook form */}
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input type='text' className='p-2 m-2' {...register("name", { required: true })} placeholder='package name' />
                 <br />

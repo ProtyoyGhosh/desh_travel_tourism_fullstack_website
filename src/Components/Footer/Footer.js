@@ -3,6 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
+        // creating row collum in the footer area
         <div className="bg-dark text-white pt-5 pb-4">
             <div className="row container text-center text-md-left">
                 <div className="col-md-3 col-lg-3 mx-auto mt-3">

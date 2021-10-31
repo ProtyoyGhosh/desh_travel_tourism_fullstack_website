@@ -14,6 +14,7 @@ const Extra = () => {
 
     return (
         <div className='m-5'>
+            {/* first part of the extra section */}
             <Card className="text-center mt-5">
                 <Card.Header className='bg-danger text-dark' style={{ fontSize: '32px', fontWeight: '600' }}>Breaking News</Card.Header>
                 <Card.Body>
@@ -27,6 +28,7 @@ const Extra = () => {
             </Card>
 
 
+            {/* second part of the extra section */}
             <div className="reason m-5">
                 <Card.Header className='bg-info text-dark' style={{ fontSize: '32px', fontWeight: '600' }}>Why choose Desh Travel?</Card.Header>
                 <div className="row m-3 p-4">
@@ -63,6 +65,7 @@ const Extra = () => {
                 </div>
             </div>
 
+            {/* link will take to the about us section */}
             <h3 className='mt-5' style={{ color: 'green', fontSize: '35px', fontWeight: '700' }}>Want to know more about us?</h3>
             <Link to='/aboutus'><strong>Please click here</strong></Link>
         </div>
