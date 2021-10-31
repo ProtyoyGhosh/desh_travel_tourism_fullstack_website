@@ -1,4 +1,5 @@
-import { getDefaultNormalizer } from '@testing-library/dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,6 +23,9 @@ const Services = () => {
         });
     }
 
+    const element = <FontAwesomeIcon icon={faShoppingCart} />
+
+
     return (
         <div>
             <h1 className='pt-5' style={{ color: 'green', fontSize: '45px', fontWeight: '700' }}>Our packages</h1>
@@ -35,7 +39,7 @@ const Services = () => {
                                     <h6 style={{ marginTop: '20px', color: 'green', fontSize: '22px', fontWeight: '700' }}>{item.name}</h6>
                                     <p style={{ fontSize: '12px', padding: '10px', color: 'black', fontWeight: '600' }}>{item.desc}</p>
                                     <h5 style={{ paddingBottom: '10px', color: 'orangered' }}>${item.price}  USD</h5>
-                                    <Link to='/myorders'><button onClick={() => handleOrder(index)} className='btn btn-success'>Book Now</button></Link>
+                                    <Link to='/myorders'><button onClick={() => handleOrder(index)} className='btn btn-success'>{element} Book Now</button></Link>
 
                                 </div>
                             ))

@@ -1,4 +1,7 @@
 import React from 'react';
+/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons' */
+
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 
@@ -17,10 +20,17 @@ const Login = () => {
             })
             .finally(() => setIsLoading(false));
     }
+
+
     return (
         <div>
-            <h1>Login here</h1>
-            <button onClick={handleGoogleLogin}>Google SignIn</button>
+            <h1 style={{ fontSize: '35px', fontWeight: '600', margin: '20px' }}>Welcome To <span style={{ color: 'green', fontSize: '55px', fontWeight: '700', }}>Desh Travels!!</span></h1>
+            <h3 style={{ fontSize: '35px', fontWeight: '600' }}>Please <span style={{ color: 'green' }}>Log in </span> to your <span style={{ color: 'green' }}>account</span></h3>
+            <div className="button">
+                <button className='btn btn-danger m-3 p-2' onClick={handleGoogleLogin}>
+                    Log in with Google
+                </button>
+            </div>
         </div>
     );
 };
