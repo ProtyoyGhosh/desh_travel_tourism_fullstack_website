@@ -1,6 +1,4 @@
 import React from 'react';
-/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons' */
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 

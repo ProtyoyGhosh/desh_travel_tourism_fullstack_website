@@ -5,8 +5,9 @@ const AddPackages = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
+        alert('package added successfully in Packages')
 
-        fetch('http://localhost:5000/addpackage', {
+        fetch('https://creepy-zombie-41639.herokuapp.com/addpackage', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -22,13 +23,13 @@ const AddPackages = () => {
                 <br />
                 <input type='text' className='p-2 m-2'  {...register("desc", { required: true })} placeholder='description' />
                 <br />
-                <input type='images' className='p-2 m-2'  {...register("img", { required: true })} placeholder='image url' /> <br /> or <br /> <input className='ms-5 ps-5 mb-1' type='file' />
+                <input type='images' className='p-2 m-2'  {...register("img", { required: true })} placeholder='image url' />
                 <br />
                 <input type='number' className='p-2 m-2'  {...register("price", { required: true })} placeholder='price' />
 
                 {errors.exampleRequired && <span>This field is required</span>}
                 <br />
-                <input className='btn btn-danger mt-3' type="submit" />
+                <input className='btn btn-danger mt-3 mb-2' type="submit" />
             </form>
         </div>
     );

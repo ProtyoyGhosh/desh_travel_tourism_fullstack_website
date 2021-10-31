@@ -3,12 +3,13 @@
     align-items: center;
     justify-content: center;
 }
-
 .banner-button {
-    border: none;
+    color: white;
+    /* border: none;
     padding: 7px;
     background-color: black;
     border-radius: 5px;
     font-size: 18px;
     font-weight: 500;
+    */
 }

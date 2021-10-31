@@ -6,14 +6,14 @@ const MyOrders = () => {
     const [isdeleted, setIsDeleted] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myorders/${email}`)
+        fetch(`https://creepy-zombie-41639.herokuapp.com/${email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [isdeleted]);
 
     const handleDelete = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/deleteproduct/${id}`, {
+        fetch(`https://creepy-zombie-41639.herokuapp.com/${id}`, {
             method: 'DELETE',
             headers: { 'content-type': 'application/json' }
         })
@@ -29,7 +29,7 @@ const MyOrders = () => {
     }
     return (
         <div>
-            <h3>Your order: {orders?.length}</h3>
+            <h3 className="text-success m-2">Your order: {orders?.length}</h3>
 
             <div className="all_orders">
                 <div className="row">
@@ -37,9 +37,6 @@ const MyOrders = () => {
                         orders.map(order => (
                             <div className="col-md-6">
                                 <div className="">
-                                    {/* <h5>{order.email}</h5>
-                                    <h4>{order.name}</h4>
-                                    <h5>{order.price}</h5> */}
                                     <img style={{ width: '200px', height: '150px' }} src={order.img} alt="" />
                                     <h6 style={{ marginTop: '20px', color: 'green', fontSize: '22px', fontWeight: '700' }}>{order.name}</h6>
                                     <p style={{ fontSize: '12px', padding: '10px', color: 'black', fontWeight: '600' }}>{order.desc}</p>

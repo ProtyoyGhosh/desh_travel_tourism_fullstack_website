@@ -7,7 +7,7 @@ const Services = () => {
     const [packages, setPackages] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://creepy-zombie-41639.herokuapp.com/packages')
             .then(res => res.json())
             .then(result => setPackages(result))
     }, []);
@@ -16,7 +16,7 @@ const Services = () => {
         const order = packages[index];
         order.email = 'protyoy@gmail.com';
 
-        fetch('http://localhost:5000/addorder', {
+        fetch('https://creepy-zombie-41639.herokuapp.com/addorder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(order),
