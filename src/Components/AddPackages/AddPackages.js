@@ -22,7 +22,7 @@ const AddPackages = () => {
                 <br />
                 <input type='text' className='p-2 m-2'  {...register("desc", { required: true })} placeholder='description' />
                 <br />
-                <input className='p-2 m-2'  {...register("img", { required: true })} placeholder='image url' />
+                <input type='images' className='p-2 m-2'  {...register("img", { required: true })} placeholder='image url' /> <br /> or <br /> <input className='ms-5 ps-5 mb-1' type='file' />
                 <br />
                 <input type='number' className='p-2 m-2'  {...register("price", { required: true })} placeholder='price' />
 

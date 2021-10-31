@@ -16,8 +16,9 @@ const Topbar = () => {
                         <Nav className="me-auto navbar">
                             <Nav.Link><Link className='links' to='/home'>Home</Link></Nav.Link>
                             <Nav.Link><Link className='links' to='/aboutus'>About Us</Link></Nav.Link>
-                            <Nav.Link><Link className='links' to='/services'>Services</Link></Nav.Link>
+                            <Nav.Link><Link className='links' to='/services'>Packages</Link></Nav.Link>
                             <Nav.Link><Link className='links' to='/myorders'>My Orders</Link></Nav.Link>
+                            <Nav.Link><Link className='links' to='/addpackages'>Add Packages</Link></Nav.Link>
                         </Nav>
                         <Nav>
                             {
@@ -26,9 +27,6 @@ const Topbar = () => {
                                     :
                                     <Nav.Link><Link className='links' to='login'>Log In</Link></Nav.Link>
                             }
-
-
-                            {/* <Nav.Link><Link className='links' to='login'>Log In</Link></Nav.Link> */}
 
                         </Nav>
                     </Navbar.Collapse>
