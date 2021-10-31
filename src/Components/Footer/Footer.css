@@ -1,0 +1,16 @@
+.footer_container {
+    height: 370px;
+    margin-top: 30px;
+    background-color: grey;
+    padding: 20px;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    padding: 10px;
+}
