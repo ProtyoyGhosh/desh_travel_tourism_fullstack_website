@@ -36,10 +36,14 @@ const MyOrders = () => {
                     {
                         orders.map(order => (
                             <div className="col-md-6">
-                                <div className="border border">
-                                    <h5>{order.email}</h5>
+                                <div className="">
+                                    {/* <h5>{order.email}</h5>
                                     <h4>{order.name}</h4>
-                                    <h5>{order.price}</h5>
+                                    <h5>{order.price}</h5> */}
+                                    <img style={{ width: '200px', height: '150px' }} src={order.img} alt="" />
+                                    <h6 style={{ marginTop: '20px', color: 'green', fontSize: '22px', fontWeight: '700' }}>{order.name}</h6>
+                                    <p style={{ fontSize: '12px', padding: '10px', color: 'black', fontWeight: '600' }}>{order.desc}</p>
+                                    <h5 style={{ paddingBottom: '10px', color: 'orangered' }}>${order.price}  USD</h5>
                                     <button onClick={() => handleDelete(order._id)} className='btn btn-danger m-2'>Cancel Order</button>
                                 </div>
                             </div>
